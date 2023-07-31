@@ -1,0 +1,27 @@
+@use '../abstract/_colors' as *;
+
+$colors: (
+  primary: map-get($purple, 500),
+  secondary: map-get($purple, 200),
+  divider: grey,
+);
+
+$background: (
+  default: $white,
+  surface: grey,
+  error: red,
+  success: green,
+  warning: gold,
+  info: blue,
+);
+
+$text: (
+  default: black,
+  onSurface: red,
+  onPrimary: green,
+  onSecondary: blue,
+  onError: red,
+  onSuccess: green,
+  onWarning: yellow,
+  onInfo: blue,
+);
