@@ -15,7 +15,7 @@ const icon = computed(() => defineAsyncComponent(() => import(`./icons/${props.i
 
 <style lang="scss" scoped>
 .base-icon {
-  width: var(--icon-size, 1.5rem);
-  height: var(--icon-size, 1.5rem);
+  width: var(--base-icon-size, 1.5rem);
+  height: var(--base-icon-size, 1.5rem);
 }
 </style>
