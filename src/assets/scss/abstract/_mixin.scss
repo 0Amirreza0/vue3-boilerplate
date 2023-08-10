@@ -1,0 +1,35 @@
+@use './variables' as *;
+
+@mixin media-query($screen-size) {
+  $size: map-get($breakpoints, $screen-size);
+
+  @if $size {
+    // Desktop first approach
+    // TODO: Implement configurable approach
+    @media only screen and (max-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin flex($dir: row, $wrap: nowrap, $align: flex-start, $justify: flex-start) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex-child($grow: 0, $shrink: 1, $align: auto) {
+  flex-shrink: $shrink;
+  flex-grow: $grow;
+  align-self: $align;
+}
+
+@mixin hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
