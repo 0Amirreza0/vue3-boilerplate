@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use './breakpoints' as *;
 
 @mixin media-query($screen-size) {
   $size: map-get($breakpoints, $screen-size);
