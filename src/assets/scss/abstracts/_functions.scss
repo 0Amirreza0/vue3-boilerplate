@@ -1,0 +1,5 @@
+@use './variables' as *;
+
+@function space($count) {
+  @return $base-space * $count;
+}

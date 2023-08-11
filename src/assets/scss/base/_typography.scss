@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+@each $screen-size, $factor in $scale-factor-map {
+  @include media-query($screen-size) {
+    :root {
+      --font-size-scale-factor: #{$factor};
+    }
+  }
+}
+
+@each $type, $rules in $typography {
+  .#{$type} {
+    @each $key, $value in $rules {
+      #{$key}: calc($value * var(--font-size-scale-factor));
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use '../abstracts/_colors' as *;
+
+$colors: (
+  primary: map-get($purple, 200),
+  secondary: map-get($purple, 500),
+  divider: grey,
+);
+
+$background: (
+  default: #121212,
+  surface: grey,
+  error: red,
+  success: green,
+  warning: gold,
+  info: blue,
+);
+
+$text: (
+  default: black,
+  on-surface: red,
+  on-primary: green,
+  on-secondary: blue,
+  on-error: red,
+  on-success: green,
+  on-warning: yellow,
+  on-info: blue,
+);
