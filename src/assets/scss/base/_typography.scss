@@ -1,4 +1,4 @@
-@use '../abstract' as *;
+@use '../abstracts' as *;
 
 @each $screen-size, $factor in $scale-factor-map {
   @include media-query($screen-size) {

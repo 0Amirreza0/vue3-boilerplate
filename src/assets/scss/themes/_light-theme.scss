@@ -1,4 +1,4 @@
-@use '../abstract/_colors' as *;
+@use '../abstracts/_colors' as *;
 
 $colors: (
   primary: map-get($purple, 500),

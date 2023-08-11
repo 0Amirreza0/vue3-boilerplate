@@ -1,4 +1,5 @@
 @use './breakpoints' as *;
+@use './elevation' as *;
 
 @mixin media-query($screen-size) {
   $size: map-get($breakpoints, $screen-size);
@@ -31,5 +32,13 @@
   scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@mixin elevation($theme, $level, $base-color, $dark-shadow: '') {
+  @if $theme == light {
+    @include light-elevation($level, $base-color);
+  } @else if $theme == dark {
+    @include dark-elevation($level, $base-color, $dark-shadow);
   }
 }
