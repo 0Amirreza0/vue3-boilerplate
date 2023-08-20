@@ -1,12 +1,13 @@
 <template>
-  <main class="main-content">
-    <RouterView />
-  </main>
+  <layout-view>
+    <router-view />
+  </layout-view>
 </template>
 
-<script setup></script>
+<script setup>
+import LayoutView from '@/layout/layout-view.vue';
+</script>
 
 <style lang="scss">
-:root {
-}
+// FIXME: remove this style tag
 </style>

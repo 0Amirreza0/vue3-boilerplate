@@ -1,8 +1,11 @@
 const ROUTES = [
   {
-    path: '/',
-    name: 'root',
+    path: '/playground',
+    name: 'playground',
     component: () => import('@/views/playground/playground.vue'),
+    meta: {
+      layout: 'panel'
+    }
   },
 ];
 
