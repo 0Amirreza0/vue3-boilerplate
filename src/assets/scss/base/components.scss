@@ -1,0 +1,9 @@
+@use '@/assets/scss/components' as *;
+
+:root {
+  @each $component, $variables in $components {
+    @each $variable, $value in $variables {
+      --#{$variable}: #{$value};
+    }
+  }
+}
