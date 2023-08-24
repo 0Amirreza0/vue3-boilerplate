@@ -2,10 +2,11 @@ const ROUTES = [
   {
     path: '/playground',
     name: 'playground',
-    component: () => import('@/views/playground/playground.vue'),
+    component: () => import('@/views/playground/playground-view.vue'),
     meta: {
-      layout: 'panel'
-    }
+      layout: 'panel',
+      title: 'Playground',
+    },
   },
 ];
 
