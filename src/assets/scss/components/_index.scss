@@ -1,0 +1,5 @@
+@use './indicator.scss' as *;
+
+$components: (
+  indicator: $indicator,
+);
