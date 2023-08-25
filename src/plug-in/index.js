@@ -1,12 +1,9 @@
-const modulesPathMap = import.meta.glob(['@/plug-in/*/index.js'], {
+const pluginSourceMap = import.meta.globEager(['@/plug-in/*/index.js'], {
   import: 'default',
 });
 
-const modules = Object.values(modulesPathMap);
+const plugins = Object.values(pluginSourceMap);
 
-export const registerPlugins = async (vueInstance) => {
-  const modulePromiseList = modules.map((module) => module());
-  const plugins = await Promise.all(modulePromiseList);
-
+export const registerPlugins = (vueInstance) => {
   plugins.forEach((plugin) => vueInstance.use(plugin));
 };
