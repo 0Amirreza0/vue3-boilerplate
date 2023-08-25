@@ -1,12 +1,14 @@
-import { createApp } from 'vue';
-import { createPinia } from 'pinia';
+import { createApp as createVueApp } from 'vue';
 
-import App from './App.vue';
-import router from './router';
+import App from '@/app.vue';
+import { registerPlugins } from '@/plug-in';
 
-const app = createApp(App);
+const createApplication = async () => {
+  const vueAppInstance = createVueApp(App);
 
-app.use(createPinia());
-app.use(router);
+  await registerPlugins(vueAppInstance);
 
-app.mount('#app');
+  vueAppInstance.mount('#app');
+};
+
+createApplication();
