@@ -12,7 +12,7 @@
 <script setup>
 import { onUnmounted, ref } from 'vue';
 
-import eventBus from '@/services/event-bus';
+import { eventBus } from '@/plug-in/event-bus';
 
 import LayoutView from '@/layout/layout-view.vue';
 import LinearIndicator from '@/components/general/indicator/linear-indicator.vue';
