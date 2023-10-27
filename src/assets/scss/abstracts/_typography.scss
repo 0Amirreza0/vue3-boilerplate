@@ -1,9 +1,9 @@
 $scale-factor-map: (
-  x-large: 1.2,
+  // x-large: 1.2,
   // large: 1.1,
   medium: 1,
   // small: 0.95,
-  x-small: 0.9,
+  x-small: 0.9
 );
 
 $typography: (
@@ -38,31 +38,31 @@ $typography: (
     letter-spacing: 0,
   ),
   body1: (
-    font-size: 1.6rem,
+    font-size: 1rem,
     font-weight: 500,
     line-height: 160%,
     letter-spacing: 0,
   ),
   body2: (
-    font-size: 1.4rem,
+    font-size: 0.875rem,
     font-weight: 800,
     line-height: 160%,
     letter-spacing: 0,
   ),
   button: (
-    font-size: 1.4rem,
+    font-size: 0.75rem,
     font-weight: 500,
     line-height: 160%,
     letter-spacing: 0,
   ),
   caption: (
-    font-size: 1.2rem,
+    font-size: 0.75rem,
     font-weight: 400,
     line-height: 160%,
     letter-spacing: 0,
   ),
   overline: (
-    font-size: 1rem,
+    font-size: 0.5rem,
     font-weight: 400,
     line-height: 160%,
     letter-spacing: 0,
