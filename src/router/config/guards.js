@@ -1,4 +1,4 @@
-import eventBus from '@/services/event-bus';
+import { eventBus } from '@/plug-in/event-bus';
 
 const beforeEach = (to, from) => {
   eventBus.publish('router:beforeEach', to, from);

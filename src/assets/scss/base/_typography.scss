@@ -11,7 +11,11 @@
 @each $type, $rules in $typography {
   .#{$type} {
     @each $key, $value in $rules {
-      #{$key}: calc($value * var(--font-size-scale-factor));
+      @if ($key == font-size) {
+        #{$key}: calc($value * var(--font-size-scale-factor, 1));
+      } @else {
+        #{$key}: $value;
+      }
     }
   }
 }
